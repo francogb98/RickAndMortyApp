@@ -1,0 +1,31 @@
+.imageContainer {
+  position: relative;
+}
+
+.imageContainer:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.3);
+  z-index: 1;
+}
+.imageText {
+  display: none;
+  position: absolute;
+  color: aliceblue;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.imageContainer:hover .imageText {
+  display: block;
+}
